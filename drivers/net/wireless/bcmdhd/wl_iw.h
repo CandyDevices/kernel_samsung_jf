@@ -70,14 +70,14 @@ struct cntry_locales_custom {
 /* ============================================== */
 /* Defines from wlc_pub.h */
 #define	WL_IW_RSSI_MINVAL		-200	/* Low value, e.g. for forcing roam */
-#define	WL_IW_RSSI_NO_SIGNAL	-91	/* NDIS RSSI link quality cutoffs */
-#define	WL_IW_RSSI_VERY_LOW	-80	/* Very low quality cutoffs */
-#define	WL_IW_RSSI_LOW		-70	/* Low quality cutoffs */
-#define	WL_IW_RSSI_GOOD		-68	/* Good quality cutoffs */
-#define	WL_IW_RSSI_VERY_GOOD	-58	/* Very good quality cutoffs */
-#define	WL_IW_RSSI_EXCELLENT	-57	/* Excellent quality cutoffs */
-#define	WL_IW_RSSI_INVALID	 0	/* invalid RSSI value */
-#define MAX_WX_STRING 80
+#define	WL_IW_RSSI_NO_SIGNAL		-98	/* NDIS RSSI link quality cutoffs */
+#define	WL_IW_RSSI_VERY_LOW		-87	/* Very low quality cutoffs */
+#define	WL_IW_RSSI_LOW			-77	/* Low quality cutoffs */
+#define	WL_IW_RSSI_GOOD			-75	/* Good quality cutoffs */
+#define	WL_IW_RSSI_VERY_GOOD		-65	/* Very good quality cutoffs */
+#define	WL_IW_RSSI_EXCELLENT		-64	/* Excellent quality cutoffs */
+#define	WL_IW_RSSI_INVALID		  0	/* invalid RSSI value */
+#define MAX_WX_STRING			 87
 #define SSID_FMT_BUF_LEN	((4 * 32) + 1)
 #define isprint(c) bcm_isprint(c)
 #define WL_IW_SET_ACTIVE_SCAN	(SIOCIWFIRSTPRIV+1)
