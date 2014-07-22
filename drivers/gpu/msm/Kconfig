@@ -109,3 +109,9 @@ config MSM_KGSL_KERNEL_API_ENABLE
 	default n
 	---help---
 	  This API will use by device driver for performance.
+
+config MSM_ADRENO_2XX
+	bool "Adreno 2xx driver"
+
+config MSM_ADRENO_3XX
+	bool "Adreno 3xx driver"
