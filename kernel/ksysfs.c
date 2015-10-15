@@ -222,7 +222,7 @@ static struct attribute_group gentle_fair_sleepers_attr_group = {
 .attrs = gentle_fair_sleepers_attrs,
 };
 
-/* Initialize fast charge sysfs folder */
+/* Initialize gentle fair sleepers sysfs folder */
 static struct kobject *gentle_fair_sleepers_kobj;
 
 static int __init ksysfs_init(void)
