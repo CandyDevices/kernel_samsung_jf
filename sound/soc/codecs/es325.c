@@ -5177,6 +5177,7 @@ void es325_wrapper_wakeup(struct snd_soc_dai *dai)
 #ifdef ES325_SLEEP
 	int rc;
 	struct es325_priv *es325 = &es325_priv;
+    if (dai->id > 0) {
 	pr_debug("=[ES325]=%s dai_id=%d ch_wakeup=%d,wakeup_cnt=%d\n", __func__,
 		dai->id, es325->dai[dai->id-1].ch_wakeup, es325->wakeup_cnt);
 	if (!es325_remote_route_enable(dai)) {
@@ -5203,6 +5204,7 @@ void es325_wrapper_wakeup(struct snd_soc_dai *dai)
 		es325_wrapper_wakeup_internal();
 	}
 	mutex_unlock(&es325->pm_mutex);
+    }
 #endif
 }
 EXPORT_SYMBOL_GPL(es325_wrapper_wakeup);
@@ -5241,6 +5243,7 @@ void es325_wrapper_sleep(int dai_id)
 {
 #ifdef ES325_SLEEP
 	struct es325_priv *es325 = &es325_priv;
+    if (dai_id > 0) {
 	pr_debug("=[ES325]=%s dai_id=%d ch_wakeup=%d,wakeup_cnt=%d\n", __func__,
 		dai_id, es325->dai[dai_id-1].ch_wakeup, es325->wakeup_cnt);
 	mutex_lock(&es325->pm_mutex);
@@ -5260,6 +5263,7 @@ void es325_wrapper_sleep(int dai_id)
 		}
 	}
 	mutex_unlock(&es325->pm_mutex);
+    }
 #endif
 }
 EXPORT_SYMBOL_GPL(es325_wrapper_sleep);
