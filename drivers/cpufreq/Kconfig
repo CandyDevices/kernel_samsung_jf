@@ -157,7 +157,7 @@ config CPU_FREQ_GOV_UBERDEMAND
 
 config CPU_FREQ_GOV_UBERDEMAND_SECOND_PHASE_FREQ
         int "Second Phase Uberdemand Frequency"
-        default 1728000
+        default 1458000
         depends on CPU_FREQ_GOV_UBERDEMAND
 
 config CPU_FREQ_GOV_PERFORMANCE
